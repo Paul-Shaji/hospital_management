@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "creation": "2026-05-05 09:46:24.448134",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_71rq",
+  "doctor_name",
+  "specialization",
+  "qualification",
+  "mobile_no",
+  "email",
+  "consultation_fee",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_71rq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "doctor_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "doctor_name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "specialization",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "specialization",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qualification",
+   "fieldtype": "Data",
+   "label": "qualification"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "mobile no"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "email"
+  },
+  {
+   "fieldname": "consultation_fee",
+   "fieldtype": "Currency",
+   "label": "consultation fee"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "is active"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-05 17:04:15.560663",
+ "modified_by": "Administrator",
+ "module": "hospital",
+ "name": "Doctor",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -247,3 +247,67 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+# ───────────────────────────────────────────
+# Doc Events
+# Called automatically by Frappe on document
+# lifecycle events for the specified DocTypes
+# ───────────────────────────────────────────
+doc_events = {
+
+    "Patient Details": {
+        "validate":     "hospital_management.hospital.doctype.patient_details.patient_details.validate",
+        "before_insert": "hospital_management.hospital.doctype.patient_details.patient_details.before_insert",
+        "after_insert": "hospital_management.hospital.doctype.patient_details.patient_details.after_insert",
+    },
+
+    "Doctor Schedules": {
+        "validate":  "hospital_management.hospital.doctype.doctor_shedules.doctor_shedules.validate",
+        "on_submit": "hospital_management.hospital.doctype.doctor_shedules.doctor_shedules.on_submit",
+        "on_cancel": "hospital_management.hospital.doctype.doctor_shedules.doctor_shedules.on_cancel",
+    },
+
+    "Appointment Records": {
+        "before_insert": "hospital_management.hospital.doctype.appointments_records.appointments_records.before_insert",
+        "validate":      "hospital_management.hospital.doctype.appointments_records.appointments_records.validate",
+        "on_submit":     "hospital_management.hospital.doctype.appointments_records.appointments_records.on_submit",
+        "on_cancel":     "hospital_management.hospital.doctype.appointments_records.appointments_records.on_cancel",
+    },
+}
+
+
+
+# ───────────────────────────────────────────
+# Fixtures
+# Master data auto-loaded when app is installed
+# ───────────────────────────────────────────
+
+fixtures = [
+    {
+        "doctype": "Doctor",
+        "filters": []
+    }
+]
+
+
+# ───────────────────────────────────────────
+# Website Route Rules
+# Maps portal URLs to Python controllers
+# ───────────────────────────────────────────
+
+website_route_rules = [
+    {
+        "from_route": "/patient-portal/<path:name>",
+        "to_route":   "patient-portal"
+    },
+]
+
+
+# ───────────────────────────────────────────
+# Permissions
+# Override default permission logic if needed
+# ───────────────────────────────────────────
+
+# permission_query_conditions = {
+#     "Appointment Records": 
+#         "hospital_management.permissions.get_permission_query_conditions",
+# }

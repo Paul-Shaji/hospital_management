@@ -1,0 +1,194 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-05-05 09:06:37.314761",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_iqol",
+  "patient",
+  "patient_name",
+  "doctor",
+  "doctor_name",
+  "doctor_schedule",
+  "appointment_date",
+  "day_of_week",
+  "from_time",
+  "to_time",
+  "appointment_type",
+  "appointment_status",
+  "payment_status",
+  "consultation_fee",
+  "amount_paid",
+  "payment_mode",
+  "doctor_notes",
+  "booked_on",
+  "booked_by",
+  "naming_series",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_iqol",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "patient",
+   "options": "Patient Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "patient name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Doctor",
+   "options": "Doctor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "doctor_name",
+   "fieldtype": "Data",
+   "label": "doctor name"
+  },
+  {
+   "fieldname": "doctor_schedule",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "doctor schedule",
+   "options": "Doctor Shedules",
+   "reqd": 1
+  },
+  {
+   "fieldname": "appointment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Appointment date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "day_of_week",
+   "fieldtype": "Select",
+   "label": "day of week",
+   "read_only": 1
+  },
+  {
+   "fieldname": "from_time",
+   "fieldtype": "Time",
+   "label": "from time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_time",
+   "fieldtype": "Time",
+   "label": "to time"
+  },
+  {
+   "fieldname": "appointment_type",
+   "fieldtype": "Select",
+   "label": "appointment type",
+   "options": "New\nFollow-up\nEmergency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "appointment_status",
+   "fieldtype": "Select",
+   "label": "appointment status",
+   "options": "Draft\nBooked\nConfirmed\nCompleted\nCancelled\nNo-Show",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "payment status",
+   "options": "Unpaid\nPaid\nWaived\nRefunded",
+   "reqd": 1
+  },
+  {
+   "fieldname": "consultation_fee",
+   "fieldtype": "Currency",
+   "label": "consultation fee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount_paid",
+   "fieldtype": "Currency",
+   "label": "amount paid"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Select",
+   "label": "payment mode",
+   "options": "Cash\nCard\nupi"
+  },
+  {
+   "fieldname": "doctor_notes",
+   "fieldtype": "Text",
+   "label": "doctor notes"
+  },
+  {
+   "fieldname": "booked_on",
+   "fieldtype": "Datetime",
+   "label": "booked on"
+  },
+  {
+   "fieldname": "booked_by",
+   "fieldtype": "Link",
+   "label": "booked by",
+   "options": "User"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Series"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Appointments Records",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-05-05 18:21:49.577472",
+ "modified_by": "Administrator",
+ "module": "hospital",
+ "name": "Appointments Records",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

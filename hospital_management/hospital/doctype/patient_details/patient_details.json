@@ -1,0 +1,149 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-05-05 08:58:15.833495",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_dqus",
+  "patient_full_name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "email",
+  "address",
+  "mobile_no",
+  "membership_expiry",
+  "patient_status",
+  "registration_date",
+  "portal_user",
+  "naming_series",
+  "blood_group"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_dqus",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "patient_full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient full name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "gender",
+   "options": "male\nfemale\nother",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "email"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "address"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "mobile no",
+   "reqd": 1
+  },
+  {
+   "fieldname": "membership_expiry",
+   "fieldtype": "Date",
+   "label": "membership expiry"
+  },
+  {
+   "fieldname": "patient_status",
+   "fieldtype": "Select",
+   "label": "patient status",
+   "options": "active\ninactive\nblacklisted",
+   "reqd": 1
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "registration date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "portal_user",
+   "fieldtype": "Link",
+   "label": "portal user",
+   "options": "User"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Series"
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Select",
+   "label": "Blood group",
+   "options": "A+\nA-\nB+\nB-\nO+\nO-\nAB+\nAB-"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-05 15:47:58.595366",
+ "modified_by": "Administrator",
+ "module": "hospital",
+ "name": "Patient Details",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
